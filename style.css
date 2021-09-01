@@ -1,0 +1,83 @@
+:root{
+    --speed: 0;
+
+}
+.machine{
+    height: 300px;
+    width: 800px;
+    border: dashed 2px black;
+    background-color: peru;
+    display: flex;
+    margin: 30px;
+}
+.slot{
+    height: 250px;
+    width: 250px;
+    background-color: whitesmoke;
+    border: solid 2px darkblue;
+    margin: 15px;
+    display: inline-block;
+
+    text-align: center;
+    vertical-align: middle;
+    font-size: 130px;
+    line-height: 250px;
+    overflow: hidden;
+}
+
+.buttonInput{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.buttonInput1{
+    display: flex;
+}
+label{
+    font-size: 20px;
+    margin: 15px;
+    left: 25px;
+    display: inline-block;
+}
+#startSpin{
+    background-color: red;
+    left: 100px;
+    font-size: 25px;
+    padding: 8px;
+    margin: 15px;
+    box-shadow: 2px 2px black;
+}
+#newSpeed{
+    font-size: 25px;
+    margin-left: 30px;
+    width: 50px;
+    background-color: red;
+}
+
+#stopSpin{
+    font-size: 25px;
+    background-color: red;
+    /* left: 150px; */
+    padding: 8px;
+    margin: 15px;
+    box-shadow: 2px 2px black;
+
+}
+.buttonInput:hover{
+    box-shadow: 4px 4px 4px darkblue;
+}
+
+.slot > .value{
+    display: inline-block;
+    animation-name: animationID;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s/var(--speed));
+}
+
+@keyframes animationID {
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(200px);
+    }    
+}
